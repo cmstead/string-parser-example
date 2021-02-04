@@ -1,0 +1,25 @@
+{
+    "name": "string-parser",
+    "version": "1.0.0",
+    "description": "String parser problem from Twitter",
+    "main": "index.js",
+    "scripts": {
+        "test": "node ./node_modules/nanocommit/"
+    },
+    "author": "Chris Stead",
+    "license": "MPL-2.0",
+    "devDependencies": {
+        "chai": "^4.3.0",
+        "mocha": "^8.2.1",
+        "nanocommit": "1.14.0"
+    },
+    "nanocommit": {
+        "testCommand": "mocha ./ ./tests/*.test.js",
+        "blindCommit": true,
+        "annotations": "nanocommit",
+        "watchFiles": [],
+        "defaultCommandArgs": null,
+        "commitMessage": null,
+        "customAnnotations": null
+    }
+}
