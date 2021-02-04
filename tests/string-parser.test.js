@@ -45,6 +45,16 @@ describe('String parser', function () {
 
             assert.deepEqual(result, expectedValue);
         });
+
+        it('passes the only case actually provided by the original requestor', function () {
+            const stringToParse = 'aaaabbbcca';
+
+            const result = parseString(stringToParse);
+
+            const expectedValue = [['a', 4], ['b', 3], ['c', 2], ['a', 1]];
+
+            assert.deepEqual(result, expectedValue);
+        });
     });
 
 });
