@@ -1,16 +1,15 @@
 function parseString(stringToParse) {
 
     let characterArray = [];
-    // let currentCharacterTuple = null;
+    let currentCharacterTuple = null;
     let lastCharacter = null;
 
     stringToParse.split('').forEach(function (character) {
-        const lastCharacterTuple = characterArray[characterArray.length - 1];
-
         if (lastCharacter !== character) {
-            characterArray.push([character, 1]);
+            currentCharacterTuple = [character, 1];
+            characterArray.push(currentCharacterTuple);
         } else {
-            lastCharacterTuple[1]++;
+            currentCharacterTuple[1]++;
         }
 
         lastCharacter = character;
