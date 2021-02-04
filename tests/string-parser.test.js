@@ -25,6 +25,16 @@ describe('String parser', function () {
 
             assert.deepEqual(result, expectedValue);
         });
+
+        it('returns an array of pairs for a string containing different characters', function () {
+            const stringToParse = 'ab';
+
+            const result = parseString(stringToParse);
+
+            const expectedValue = [['a', 1], ['b', 1]];
+
+            assert.deepEqual(result, expectedValue);
+        });
     });
 
 });
