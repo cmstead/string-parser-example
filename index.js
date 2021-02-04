@@ -1,24 +1,21 @@
 function parseString(stringToParse) {
-    if (stringToParse === 'aa') {
-        return [['a', stringToParse.length]];
-    } else {
-        let characterArray = [];
 
-        stringToParse.split('').forEach(function (character) {
-            const lastCharacterTuple = characterArray[characterArray.length - 1];
-            const lastCharacter = characterArray.length > 0
-                ? lastCharacterTuple[0]
-                : null;
+    let characterArray = [];
 
-            if (lastCharacter !== character) {
-                characterArray.push([character, 1]);
-            } else {
-                lastCharacterTuple[1]++;
-            }
-        });
+    stringToParse.split('').forEach(function (character) {
+        const lastCharacterTuple = characterArray[characterArray.length - 1];
+        const lastCharacter = characterArray.length > 0
+            ? lastCharacterTuple[0]
+            : null;
 
-        return characterArray;
-    }
+        if (lastCharacter !== character) {
+            characterArray.push([character, 1]);
+        } else {
+            lastCharacterTuple[1]++;
+        }
+    });
+
+    return characterArray;
 }
 
 module.exports = {
