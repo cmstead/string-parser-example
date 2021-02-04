@@ -16,6 +16,15 @@ describe('String parser', function () {
             assert.deepEqual(result, expectedValue);
         });
 
+        it('returns an array of a pair containing the letter and count for a two-character, same character string', function () {
+            const stringToParse = 'aa';
+
+            const result = parseString(stringToParse);
+
+            const expectedValue = [['a', 2]];
+
+            assert.deepEqual(result, expectedValue);
+        });
     });
 
 });

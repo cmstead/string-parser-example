@@ -1,5 +1,5 @@
 function parseString(string) {
-    return [['a', 1]];
+    return [['a', string.length]];
 }
 
 module.exports = {
